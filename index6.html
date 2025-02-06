@@ -1,0 +1,79 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: URNA ELETRÔNICA
+    Faça um programa que simule a urna eletrônica.
+    A tela a ser apresentada deverá ser da seguinte forma:
+    As opções são:
+    1. Candidato Joãozinho
+    2. Candidato Mariazinha
+    3. Nulo
+    4. Branco
+    Entre com o seu voto:
+
+    O programa deverá ler os votos dos eleitores e, quando for entrado o número 0, apresentar as seguintes
+    informações:
+    a) O número de votos de cada candidato;
+    b) A porcentagem de votos nulos;
+    c) A porcentagem de votos brancos;
+    d) O candidato vencedor.
+    */
+
+    //ENTRADA
+    
+   
+        
+      let votoJ = 0;
+      let votoM = 0;
+      let votoN = 0;
+      let votoB = 0;
+      let totalVotos = 0;
+
+
+    let voto = -1;
+        while (voto !== 0) {
+         voto = Number(prompt("As opções são:\n1. Candidato Joãozinho\n2. Candidato Mariazinha\n3. Nulo\n4. Branco\nEntre com o seu voto (0 para terminar):"));
+            
+         if (voto === 1) {
+            votoJ++;
+        } else if (voto === 2) {
+            votoM++;
+         } else if (voto === 3) {
+             votoN++;
+         } else if (voto === 4) {
+            votoB++;
+         }
+         if (voto !== 0) {
+             totalVotos++;
+          }
+       }
+
+      
+       let porcentagemNulos = (votoN / totalVotos) * 100;
+      let porcentagemBrancos = (votoB / totalVotos) * 100;
+
+       
+     let vencedor = "";
+     if (votoJ > votoM) {
+        vencedor = "Joãozinho";
+       } else if (votoM > votoJ) {
+         vencedor = "Mariazinha";
+      } else {
+           vencedor = "Empate";
+     }
+
+    document.write(`Resultado da eleição:<br><br>` +
+    `Candidato Joãozinho: ${votoJ} votos<br>` +
+    `Candidato Mariazinha: ${votoM} votos<br>` +
+    `Votos Nulos: ${votoN} votos<br>` +
+    `Votos Brancos: ${votoB} votos<br>` +
+    `Porcentagem de votos nulos: ${porcentagemNulos.toFixed(2)}%<br>` +
+    `Porcentagem de votos brancos: ${porcentagemBrancos.toFixed(2)}%<br>` +
+    `Candidato vencedor: ${vencedor}`);
+
+    //PROCESSAMENTO
+
+
+    //SAÍDA
+
+</script>
