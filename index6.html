@@ -32,7 +32,7 @@
 
     let voto = -1;
         while (voto !== 0) {
-         voto = Number(prompt("As opções são:\n1. Candidato Joãozinho\n2. Candidato Mariazinha\n3. Nulo\n4. Branco\nEntre com o seu voto (0 para terminar):"));
+         voto = Number(prompt(`As opções são:\n1. Candidato Joãozinho\n2. Candidato Mariazinha\n3. Nulo\n4. Branco\nEntre com o seu voto (0 para terminar)`));
             
          if (voto === 1) {
             votoJ++;
@@ -62,13 +62,13 @@
            vencedor = "Empate";
      }
 
-    document.write(`Resultado da eleição:<br><br>` +
+    document.write(`Resultado da eleição:<br>` +
     `Candidato Joãozinho: ${votoJ} votos<br>` +
     `Candidato Mariazinha: ${votoM} votos<br>` +
     `Votos Nulos: ${votoN} votos<br>` +
     `Votos Brancos: ${votoB} votos<br>` +
-    `Porcentagem de votos nulos: ${porcentagemNulos.toFixed(2)}%<br>` +
-    `Porcentagem de votos brancos: ${porcentagemBrancos.toFixed(2)}%<br>` +
+    `Porcentagem de votos nulos: ${porcentagemNulos.toFixed(0)}%<br>` +
+    `Porcentagem de votos brancos: ${porcentagemBrancos.toFixed(0)}%<br>` +
     `Candidato vencedor: ${vencedor}`);
 
     //PROCESSAMENTO
