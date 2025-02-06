@@ -11,9 +11,40 @@
     */
 
     //ENTRADA
+    let nome = prompt("Informe seu nome:");
+    while (nome.length < 3) {
+    alert("Nome inválido. O nome deve ter mais de 3 caracteres.");
+    nome = prompt("Informe seu nome:");
+}
 
+    let idade = Number(prompt("Qual a sua idade?"));
+    while (idade < 0 || idade > 150) {
+    alert("Idade inválida. A idade deve ser entre 0 e 150.");
+    idade = Number(prompt("Informe sua idade:"));
+}
+
+    let salario = Number(prompt("Qual o seu salário?"));
+    while (salario <= 0) {
+    alert("Salário inválido. O salário deve ser maior que zero.");
+    salario = Number(prompt("Qual o seu salário?"));
+}
+
+    let genero = prompt("Qual o seu gênero? (M ou F)").toLowerCase();
+    while (genero !== 'm' && genero !== 'f') {
+    alert("Gênero inválido. Digite 'M' ou 'F'.");
+    genero = prompt("Qual o seu gênero? (M ou F)").toLowerCase();
+}
+
+    let ec = prompt("Qual o seu Estado Civil? (s , c , v , d )").toLowerCase();
+    while (ec !== 's' && ec !== 'c' && ec !== 'v' && ec !== 'd') {
+    alert("Estado Civil inválido. Digite 's', 'c', 'v' ou 'd'.");
+    ec = prompt("Qual o seu Estado Civil? (s - solteiro, c - casado, v - viúvo, d - divorciado)").toLowerCase();
+}
+
+    alert(`Nome: ${nome}\nIdade: ${idade}\nSalário: R$${salario}\nGênero: ${genero.toUpperCase()}\nEstado Civil: ${ec.toUpperCase()}`);
 
     //PROCESSAMENTO
+
 
 
     //SAÍDA
